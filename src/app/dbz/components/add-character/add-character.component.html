@@ -2,15 +2,15 @@
 <form class="max-w-md mx-auto bg-white border border-gray-300 shadow-lg rounded-lg px-8 py-6">
   <div class="mb-4">
     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-    <input type="text" id="name"
+    <input type="text" id="name" name="name" [(ngModel)]="character.name"
       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
   </div>
   <div class="mb-4">
     <label for="power" class="block text-gray-700 text-sm font-bold mb-2">Power</label>
-    <input type="number" id="power"
+    <input type="number" id="power" name="power" [(ngModel)]="character.power"
       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
   </div>
-  <button type="submit"
+  <button type="submit" (click)="emitCharacter()"
     class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600">Add</button>
+    <pre>{{character | json}}</pre>
 </form>
-

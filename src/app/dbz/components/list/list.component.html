@@ -1,10 +1,20 @@
-<h4 class="text-2xl">List</h4>
+<h4 class="text-2xl text-center font-bold">List</h4>
 <ul class="border border-gray-300 divide-y divide-gray-300">
-  <li *ngFor="let character of characterList; index as i" class="p-4">
-    <span class="text-cyan-600">{{i + 1}}.</span> -
-    <span>{{character.name}}</span> -
+  <li *ngFor="
+  let character of characterList;
+  index as i;
+  let first = first;
+  let last = last;
+  let isEven =even;
+  let isOdd =odd;
+  " class="p-4" [ngClass]="{
+    'bg-rose-300': first,
+    'bg-slate-800 text-zinc-50': last,
+    'bg-slate-400': isOdd,
+  }">
+    <span class="text-cyan-600">{{i + 1}}.</span>
+    <span> {{character.name}}</span> -
     <strong>Power</strong>:
     <span>{{character.power}}</span>
-    <span>Is the first: {{i === 0}}</span>
   </li>
 </ul>

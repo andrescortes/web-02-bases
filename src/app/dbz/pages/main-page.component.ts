@@ -7,6 +7,7 @@ import { Character } from '../interfaces/character.interface';
 })
 
 export class MainPageComponent {
+
   public characters: Character[] = [
     {
       name: 'Krillin',
@@ -21,4 +22,5 @@ export class MainPageComponent {
       power: 7500
     }
   ];
+
 }
