@@ -30,6 +30,9 @@ export class HeroComponent {
   resetForm(): void {
     this.name = 'ironman';
     this.age = 50;
+    // document.querySelectorAll('h1')!.forEach((el:HTMLHeadingElement) => {
+    //   el.innerHTML = `<h1>From Angular</h1>`;
+    // });
   }
 
 }
