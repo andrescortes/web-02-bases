@@ -1,5 +1,10 @@
 <h4 class="text-2xl">List</h4>
 <ul class="border border-gray-300 divide-y divide-gray-300">
-  <li class="p-4">Krillin - 500</li>
-  <li class="p-4">Goku - 10000</li>
+  <li *ngFor="let character of characterList; index as i" class="p-4">
+    <span class="text-cyan-600">{{i + 1}}.</span> -
+    <span>{{character.name}}</span> -
+    <strong>Power</strong>:
+    <span>{{character.power}}</span>
+    <span>Is the first: {{i === 0}}</span>
+  </li>
 </ul>
