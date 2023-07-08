@@ -1,5 +1,5 @@
 <h4 class="text-center">Add Character</h4>
-<form class="max-w-md mx-auto bg-white border border-gray-300 shadow-lg rounded-lg px-8 py-6">
+<form (ngSubmit)="emitCharacter()" class="max-w-md mx-auto bg-white border border-gray-300 shadow-lg rounded-lg px-8 py-6">
   <div class="mb-4">
     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
     <input type="text" id="name" name="name" [(ngModel)]="character.name"
@@ -12,5 +12,5 @@
   </div>
   <button type="submit" (click)="emitCharacter()"
     class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600">Add</button>
-    <pre>{{character | json}}</pre>
+    <!-- <pre>{{character | json}}</pre> -->
 </form>
